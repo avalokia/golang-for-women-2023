@@ -1,0 +1,154 @@
+{
+	"info": {
+		"_postman_id": "1c4632f8-115e-4677-8c55-5b03feb3596d",
+		"name": "Golang For Women 2023: Assignment Project",
+		"description": "Assignee: Devi Tara Avalokita",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21572937"
+	},
+	"item": [
+		{
+			"name": "Get All Student",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/students",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"students"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Student",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Tara\",\r\n    \"age\": 25,\r\n    \"scores\": [\r\n        {\r\n            \"assignment_title\": \"Assignment Project 1\",\r\n            \"description\": \"Create simple API without middleware\",\r\n            \"score\": 95\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/student",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"student"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Example 1",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Tara\",\r\n    \"age\": 25,\r\n    \"scores\": [\r\n        {\r\n            \"assignment_title\": \"Assignment Project 1\",\r\n            \"description\": \"Create simple API without middleware\",\r\n            \"score\": 95\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/student",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"student"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 24 Aug 2023 14:06:01 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "387"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"Tara\",\n        \"age\": 25,\n        \"Scores\": [\n            {\n                \"ID\": 1,\n                \"assignment_title\": \"Assignment Project 1\",\n                \"description\": \"Create simple API without middleware\",\n                \"score\": 95,\n                \"StudentID\": 1,\n                \"CreatedAt\": \"2023-08-24T21:06:01.6917146+07:00\",\n                \"UpdatedAt\": \"2023-08-24T21:06:01.6917146+07:00\"\n            }\n        ],\n        \"CreatedAt\": \"2023-08-24T21:06:01.6905188+07:00\",\n        \"UpdatedAt\": \"2023-08-24T21:06:01.6905188+07:00\"\n    },\n    \"success\": true\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete Student",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/student/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"student",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Student",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Tara\",\r\n    \"age\": 27,\r\n    \"scores\": [\r\n        {\r\n            \"assignment_title\": \"Assignment Project 2\",\r\n            \"description\": \"Create simple API without middleware 2\",\r\n            \"score\": 100\r\n        },\r\n        {\r\n            \"assignment_title\": \"Assignment Project 3\",\r\n            \"description\": \"Create simple API without middleware 3\",\r\n            \"score\": 75\r\n        },\r\n        {\r\n            \"assignment_title\": \"Assignment Project 4\",\r\n            \"description\": \"Create simple API without middleware 4\",\r\n            \"score\": 80\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/student/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"student",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
